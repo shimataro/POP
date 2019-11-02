@@ -1,0 +1,115 @@
+/* ヘルプファイル用スタイルシート */
+
+/**********************************************************/
+/* body */
+body
+{
+	background-image    : url("./image/bg.png");
+	background-color    : rgb(216, 233, 236);
+	background-repeat   : no-repeat;
+	background-position : right top;
+
+	margin : 64px 5% 5%;
+
+	color     : black;
+	font-size : 105%;
+}
+
+
+/**********************************************************/
+/* アンカー */
+a:link    { color : blue  ; text-decoration : none;   } /* 未訪問リンク */
+a:visited { color : purple; text-decoration : none;   } /* 訪問済みリンク */
+a:hover   { background-color : cyan ; color : red;    } /* ホバーリンク */
+a:active  { background-color : green; color : yellow; } /* アクティブリンク */
+
+
+/**********************************************************/
+/* 横線 */
+hr { width : 70%; }
+
+
+/**********************************************************/
+/* h1, 2, 3, ... */
+h1
+{
+	text-align    : left;
+	border-left   : 0.75em solid red;
+	border-bottom : 1px    solid red;
+}
+
+
+/**********************************************************/
+/* リスト */
+.code
+{
+	font-family : "FixedSys";
+	font-size   : 14pt;
+}
+
+li.q
+{
+	color            : red;
+	list-style-image : url("./image/q.png");
+}
+
+li.a
+{
+	color            : green;
+	list-style-image : url("./image/a.png");
+}
+
+dt
+{
+	font-weight : bold;
+}
+
+
+/**********************************************************/
+/* テーブル */
+table
+{
+	margin-left  : auto;
+	margin-right : auto;
+}
+
+
+/**********************************************************/
+/* 画像 */
+img { border : 0px none; }
+
+
+/**********************************************************/
+/* アドレス */
+address { text-align : center; }
+
+
+/**********************************************************/
+/* 段落 */
+p { text-indent : 1em; }
+
+
+/**********************************************************/
+/* spanセレクタ */
+
+/* 固有名詞 */
+span.unique
+{
+	font-weight : bold;
+	color       : #ff0000;
+}
+
+
+/**********************************************************/
+/* divセレクタ */
+div { text-align : center; }
+
+div.back { text-align : right; }
+
+div.copyright
+{
+	margin-top : 1em;
+	border-top : 1px solid black;
+	text-align : right;
+	font-size  : 90%;
+}

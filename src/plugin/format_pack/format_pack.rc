@@ -1,0 +1,278 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTING_PNG DIALOG DISCARDABLE  0, 0, 171, 162
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PNGの設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "ﾃｷｽﾄﾃﾞｰﾀを圧縮",IDC_PNG_CHECK_COMPRESS_TEXT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,66,10
+    CONTROL         "ｶﾞﾝﾏ値を保存",IDC_PNG_CHECK_GAMMA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,19,56,10
+    CONTROL         "更新時刻情報を保存",IDC_PNG_CHECK_TIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,31,77,10
+    CONTROL         "なし",IDC_PNG_RADIO_INTERLACE_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,13,55,27,10
+    CONTROL         "Adam7",IDC_PNG_RADIO_INTERLACE_ADAM7,"Button",
+                    BS_AUTORADIOBUTTON,61,55,36,10
+    GROUPBOX        "ｲﾝﾀｰﾚｰｽ",IDC_STATIC,7,45,107,26,WS_GROUP
+    CONTROL         "なし",IDC_PNG_RADIO_FILTER_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,13,83,27,10
+    CONTROL         "Sub",IDC_PNG_RADIO_FILTER_SUB,"Button",
+                    BS_AUTORADIOBUTTON,13,93,27,10
+    CONTROL         "Up",IDC_PNG_RADIO_FILTER_UP,"Button",BS_AUTORADIOBUTTON,
+                    13,103,24,10
+    CONTROL         "Average",IDC_PNG_RADIO_FILTER_AVERAGE,"Button",
+                    BS_AUTORADIOBUTTON,61,83,36,10
+    CONTROL         "Paeth",IDC_PNG_RADIO_FILTER_PAETH,"Button",
+                    BS_AUTORADIOBUTTON,61,93,33,10
+    GROUPBOX        "ﾌｨﾙﾀ",IDC_STATIC,7,74,96,44,WS_GROUP
+    CONTROL         "Slider1",IDC_PNG_SLIDER_COMPRESS,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_TOP | WS_TABSTOP,20,129,100,21
+    LTEXT           "低",IDC_STATIC,13,141,8,8
+    LTEXT           "高",IDC_STATIC,120,141,8,8
+    GROUPBOX        "圧縮ﾚﾍﾞﾙ",IDC_STATIC,7,121,125,34
+    DEFPUSHBUTTON   "OK",IDOK,114,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,114,24,50,14
+END
+
+IDD_SETTING_PNM DIALOG DISCARDABLE  0, 0, 135, 51
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PNMの設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "ｱｽｷｰ形式",IDC_PNM_SETTING_RADIO_FORMAT_ASCII,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,13,18,47,10
+    CONTROL         "ﾊﾞｲﾅﾘ形式",IDC_PNM_SETTING_RADIO_FORMAT_BINARY,"Button",
+                    BS_AUTORADIOBUTTON,13,28,48,10
+    GROUPBOX        "格納形式",IDC_STATIC,7,7,64,37,WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,78,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,78,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SETTING_PNG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_SETTING_PNM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 44
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "フォーマットプラグイン パッケージ\0"
+            VALUE "CompanyName", "しまたろ@Personal Software House\0"
+            VALUE "FileDescription", "フォーマットプラグイン パッケージ\0"
+            VALUE "FileVersion", "1.00\0"
+            VALUE "InternalName", "format_pack\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002 しまたろ@Personal Software House\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "format_pack.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "フォーマットプラグイン パッケージ\0"
+            VALUE "ProductVersion", "1.00\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PRODUCT_AUTHOR      "しまたろ"
+    IDS_PRODUCT_DESCRIPTION "ﾌｫｰﾏｯﾄﾌﾟﾗｸﾞｲﾝ ﾊﾟｯｹｰｼﾞ(BMP/GIF/ICO/JPG/PNG/PNM/RAS)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_NAME_BMP     "BITMAP"
+    IDS_FORMAT_EXT_BMP      ".bmp"
+    IDS_FORMAT_FILTER_BMP   "*.bmp;*.dib;*.rle"
+    IDS_FORMAT_EXPRESSION_BMP "Windows BITMAP(*.bmp)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_NAME_GIF     "GIF"
+    IDS_FORMAT_EXT_GIF      ".gif"
+    IDS_FORMAT_FILTER_GIF   "*.gif"
+    IDS_FORMAT_EXPRESSION_GIF "CompuServe GIF(*.gif)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_NAME_ICO     "ICON"
+    IDS_FORMAT_EXT_ICO      ".ico"
+    IDS_FORMAT_FILTER_ICO   "*.ico"
+    IDS_FORMAT_EXPRESSION_ICO "Windows ICON(*.ico)"
+    IDS_FORMAT_NAME_JPG     "JPEG"
+    IDS_FORMAT_EXT_JPG      ".jpg"
+    IDS_FORMAT_FILTER_JPG   "*.jpg;*.jpe;*.jpeg"
+    IDS_FORMAT_EXPRESSION_JPG "Joint Photographic Expert Group(*.jpg)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_NAME_PNG     "PNG"
+    IDS_FORMAT_EXT_PNG      ".png"
+    IDS_FORMAT_FILTER_PNG   "*.png"
+    IDS_FORMAT_EXPRESSION_PNG "Portable Network Graphics(*.png)"
+    IDS_FORMAT_NAME_PNM     "PNM"
+    IDS_FORMAT_EXT_PNM      ".pnm"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_FILTER_PNM   "*.pnm;*.pgm;*.pbm;*.ppm"
+    IDS_FORMAT_EXPRESSION_PNM "Portable aNy Map(*.pnm)"
+    IDS_FORMAT_NAME_RAS     "RAS"
+    IDS_FORMAT_EXT_RAS      ".ras"
+    IDS_FORMAT_FILTER_RAS   "*.ras"
+    IDS_FORMAT_EXPRESSION_RAS "Sun Rasterfile(*.ras)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_PNG_CHECK_COMPRESS_TEXT "ﾃｷｽﾄﾃﾞｰﾀを圧縮して保存します"
+    IDC_PNG_CHECK_GAMMA     "異なるﾏｼﾝやOSでも同じ明るさで表示されるように、ｶﾞﾝﾏの値を保存します"
+    IDC_PNG_CHECK_TIME      "更新時刻を保存します"
+    IDC_PNG_RADIO_INTERLACE_NONE "ｲﾝﾀｰﾚｰｽ形式で保存しません"
+    IDC_PNG_RADIO_INTERLACE_ADAM7 "Adam7 ｲﾝﾀｰﾚｰｽ形式で保存します"
+    IDC_PNG_RADIO_FILTER_NONE "ｲﾝﾃﾞｯｸｽｶﾗｰﾓｰﾄﾞの画像に有効です"
+    IDC_PNG_RADIO_FILTER_SUB "横方向に似た色の続く画像に有効です"
+    IDC_PNG_RADIO_FILTER_UP "縦方向に似た色の続く画像に有効です"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_PNG_RADIO_FILTER_AVERAGE 
+                            "輝度値の変化率が似ているﾋﾟｸｾﾙが多い画像に有効です"
+    IDC_PNG_RADIO_FILTER_PAETH "色があまり変化しない画像に有効です"
+    IDC_PNG_SLIDER_COMPRESS "圧縮ﾚﾍﾞﾙを設定します。右へ行くほど圧縮率は高くなりますが、時間もかかります"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_PNM_SETTING_RADIO_FORMAT_ASCII "ｱｽｷｰ形式で保存します"
+    IDC_PNM_SETTING_RADIO_FORMAT_BINARY "ﾊﾞｲﾅﾘ形式で保存します"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

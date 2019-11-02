@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Auto Generated" value="Yes">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="目次">
+		<param name="Local" value="index.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="はじめに">
+		<param name="Local" value="introduction.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="動作環境">
+		<param name="Local" value="requirement.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="使い方">
+		<param name="Local" value="usage/index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="画像を開く/保存する">
+			<param name="Local" value="usage/open.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="基本的な使い方">
+			<param name="Local" value="usage/basic.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="画像モードを変更する">
+				<param name="Local" value="usage/basic.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="色成分を入れ替える">
+				<param name="Local" value="usage/basic.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="画像のサイズを変更する（リサイズ/トリミング）">
+				<param name="Local" value="usage/basic.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="画像に使われている色数を減らす（減色）">
+				<param name="Local" value="usage/basic.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="選択ツールの使い方">
+			<param name="Local" value="usage/select.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="フィルタを使ってみる">
+			<param name="Local" value="usage/filter.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Q ＆ A">
+		<param name="Local" value="QandA.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Photo Operatorについて">
+			<param name="Local" value="QandA.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="機能について">
+			<param name="Local" value="QandA.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="その他">
+			<param name="Local" value="QandA.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="謝辞・著作権表示">
+		<param name="Local" value="thanks.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="謝辞">
+			<param name="Local" value="thanks.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="著作権表示">
+			<param name="Local" value="thanks.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="参考資料">
+		<param name="Local" value="bibliography.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="開発者向け情報">
+		<param name="Local" value="developer/index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="プラグインの作り方">
+			<param name="Local" value="developer/plugin.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Photo Operatorプラグインの定義">
+				<param name="Local" value="developer/plugin.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="フィルタプラグインの定義">
+				<param name="Local" value="developer/plugin.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="フォーマットプラグインの定義">
+				<param name="Local" value="developer/plugin.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="再利用可能なコンポーネントについて">
+			<param name="Local" value="developer/recycle.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="MFCからの派生クラス">
+				<param name="Local" value="developer/recycle.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="独自のクラス">
+				<param name="Local" value="developer/recycle.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="関数">
+				<param name="Local" value="developer/recycle.html">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

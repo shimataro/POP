@@ -1,0 +1,28 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=POP-eng.chm
+Contents file=POP.hhc
+Default Font=Times New Roman,8,1
+Default Window=Photo Operator
+Default topic=index.htm
+Display compile progress=No
+Error log file=POP.log
+Full-text search=Yes
+Index file=POP.hhk
+Language=0x809 âpåÍ (âpçë)
+Title=Photo Operator Help File
+
+[WINDOWS]
+Photo Operator="Photo Operator Help File","POP.hhc","POP.hhk","index.htm",,,,,,0x63520,,0x387e,,,,,,,,0
+
+
+[FILES]
+index.htm
+introduction.htm
+FAQ.htm
+bibliography.htm
+thanks.htm
+file\file.htm
+
+[INFOTYPES]
+

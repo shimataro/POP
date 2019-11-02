@@ -1,0 +1,14 @@
+; format_pack.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "format_pack"
+
+EXPORTS
+	pop_get_product				@1
+	pop_set_registry			@2
+;	pop_setup					@3
+	pop_format_count			@4
+	pop_format_info				@5
+	pop_format_support_mode		@6
+	pop_format_import			@7
+	pop_format_export			@8
+	pop_format_option			@9

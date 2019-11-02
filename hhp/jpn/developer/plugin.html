@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../index.css" type="text/css">
+<link rel="index" href="../index.html">
+<link rev="made" href="mailto:shima_t@cool.ne.jp">
+<title>プラグインの作り方</title>
+</head>
+
+<body>
+
+<h2>プラグインの作り方</h2>
+<p>
+Photo Operatorは、プラグインを導入することにより本体の機能を拡張することが可能です。
+現在のところ、プラグインの種類には以下のものがあります。
+</p>
+<ul>
+	<li>フィルタプラグイン
+	<li>フォーマットプラグイン
+</ul>
+
+<h3>Photo Operatorプラグインの定義</h3>
+<p>
+Photo Operatorのプラグインとは、以下の関数をエクスポートする実行可能モジュールと定義することができます。
+</p>
+<ul class="code">
+	<li>pop_get_product
+	<li>pop_set_registry
+</ul>
+<p>
+Photo Operatorのプラグインは、以下の関数をエクスポートすることもできます。
+</p>
+<ul class="code">
+	<li>pop_setup
+</ul>
+
+<h3>フィルタプラグインの定義</h3>
+<p>
+また、フィルタプラグインとは、Photo Operatorのプラグインであり、かつ以下の<strong>全ての</strong>関数をエクスポートする実行可能モジュールと定義することができます。
+</p>
+<ul class="code">
+	<li>pop_filter_count
+	<li>pop_filter_info
+	<li>pop_filter_executable
+	<li>pop_filter_effect
+	<li>pop_filter_option
+</ul>
+
+<h3>フォーマットプラグインの定義</h3>
+<p>
+また、フォーマットプラグインとは、Photo Operatorのプラグインであり、かつ以下の<strong>全ての</strong>関数をエクスポートする実行可能モジュールと定義することができます。
+</p>
+<ul class="code">
+	<li>pop_format_count
+	<li>pop_format_info
+	<li>pop_format_support_mode
+	<li>pop_format_import
+	<li>pop_format_export
+	<li>pop_format_option
+</ul>
+
+<p>
+上記の定義を満たしていない実行可能モジュールは、Photo Operatorのプラグインとはみなされません。
+</p>
+<p>
+上記の関数をすべてエクスポートする実行可能モジュールを作ればフィルタプラグインとフォーマットプラグインを両方含むプラグインになります。
+よって、Photo Operatorのプラグインを利用したアプリケーションを作成する際は、プラグイン候補の実行可能モジュールがフィルタプラグインであることを確認した後も、さらにフォーマットプラグインであることを確認する必要があります。
+</p>
+
+<!-- 「戻る」リンク -->
+<div class="back">
+<a href="javascript:history.go(-1)" title="戻る">戻る</a>
+</div>
+
+<!-- 著作権表示 -->
+<div class="copyright">
+Copyright&copy; 2001-2003 しまたろ
+</div>
+
+</body>
+
+</html>

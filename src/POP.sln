@@ -1,0 +1,75 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POP", "POP\POP.vcproj", "{4CED4DA7-45D8-4C09-B885-7808870701B3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filter_pack", "plugin\filter_pack\filter_pack.vcproj", "{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "format_pack", "plugin\format_pack\format_pack.vcproj", "{CFD18CC6-3DAB-415E-A89D-9167EF607D42}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PictBear", "plugin\PictBear\PictBear.vcproj", "{450C783A-E578-4F44-9719-7714A029AA52}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResPack", "language\ResPack.vcproj", "{374997EE-6664-4857-8FE2-66205FC1E5E7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Unicode = Debug Unicode
+		Release = Release
+		Release Unicode = Release Unicode
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Debug.ActiveCfg = Debug|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Debug.Build.0 = Debug|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Debug Unicode.ActiveCfg = Debug Unicode|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Debug Unicode.Build.0 = Debug Unicode|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Release.ActiveCfg = Release|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Release.Build.0 = Release|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Release Unicode.ActiveCfg = Release Unicode|Win32
+		{4CED4DA7-45D8-4C09-B885-7808870701B3}.Release Unicode.Build.0 = Release Unicode|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Debug.ActiveCfg = Debug|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Debug.Build.0 = Debug|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Debug Unicode.ActiveCfg = Debug Unicode|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Debug Unicode.Build.0 = Debug Unicode|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Release.ActiveCfg = Release|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Release.Build.0 = Release|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Release Unicode.ActiveCfg = Release Unicode|Win32
+		{4CAA96D0-421C-40F2-8429-09A4A68C2DA9}.Release Unicode.Build.0 = Release Unicode|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Debug.ActiveCfg = Debug|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Debug.Build.0 = Debug|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Debug Unicode.ActiveCfg = Debug Unicode|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Debug Unicode.Build.0 = Debug Unicode|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Release.ActiveCfg = Release|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Release.Build.0 = Release|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Release Unicode.ActiveCfg = Release Unicode|Win32
+		{CFD18CC6-3DAB-415E-A89D-9167EF607D42}.Release Unicode.Build.0 = Release Unicode|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Debug.ActiveCfg = Debug|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Debug.Build.0 = Debug|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Debug Unicode.ActiveCfg = Debug Unicode|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Debug Unicode.Build.0 = Debug Unicode|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Release.ActiveCfg = Release|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Release.Build.0 = Release|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Release Unicode.ActiveCfg = Release Unicode|Win32
+		{450C783A-E578-4F44-9719-7714A029AA52}.Release Unicode.Build.0 = Release Unicode|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Debug.ActiveCfg = ResJpn Debug|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Debug.Build.0 = ResJpn Debug|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Debug Unicode.ActiveCfg = ResJpn Debug Unicode|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Debug Unicode.Build.0 = ResJpn Debug Unicode|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Release.ActiveCfg = ResJpn Release|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Release.Build.0 = ResJpn Release|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Release Unicode.ActiveCfg = ResJpn Release Unicode|Win32
+		{374997EE-6664-4857-8FE2-66205FC1E5E7}.Release Unicode.Build.0 = ResJpn Release Unicode|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

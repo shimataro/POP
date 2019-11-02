@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800027">
+	<param name="ImageType" value="Folder">
+<param name="Font" value="ＭＳ Ｐゴシック,9,1">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Photo Operator Help File">
+		<param name="Local" value="index.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Introduction">
+			<param name="Local" value="introduction.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Freqentry Asked Questions">
+			<param name="Local" value="FAQ.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&quot;File&quot;">
+			<param name="Local" value="file\file.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="新規作成">
+				<param name="Local" value="file\file.htm#NEW">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="開く">
+				<param name="Local" value="file\file.htm#OPEN">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="閉じる">
+				<param name="Local" value="file\file.htm#CLOSE">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="すべて閉じる">
+				<param name="Local" value="file\file.htm#CLOSEALL">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="上書き保存">
+				<param name="Local" value="file\file.htm#SAVE">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="名前を付けて保存">
+				<param name="Local" value="file\file.htm#SAVEAS">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="すべて保存">
+				<param name="Local" value="file\file.htm#SAVEALL">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="印刷">
+				<param name="Local" value="file\file.htm#PRINT">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="印刷プレビュー">
+				<param name="Local" value="file\file.htm#PREVIEW">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="プリンタの設定">
+				<param name="Local" value="file\file.htm#PRINTSET">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="最近使ったファイル">
+				<param name="Local" value="file\file.htm#MRU">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="アプリケーションの終了">
+				<param name="Local" value="file\file.htm#EXIT">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Bibliography">
+			<param name="Local" value="bibliography.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Credit">
+			<param name="Local" value="thanks.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="Font" value="ＭＳ Ｐゴシック,9,1">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="[ファイル]メニュー">
+		<param name="Local" value="file\file.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="新規作成">
+			<param name="Local" value="file\file.htm#NEW">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="開く">
+			<param name="Local" value="file\file.htm#OPEN">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="閉じる">
+			<param name="Local" value="file\file.htm#CLOSE">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="すべて閉じる">
+			<param name="Local" value="file\file.htm#CLOSEALL">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FAQ">
+		<param name="Name" value="FAQ">
+		<param name="Local" value="FAQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="参考資料">
+		<param name="Local" value="bibliography.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

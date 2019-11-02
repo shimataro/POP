@@ -1,0 +1,38 @@
+[OPTIONS]
+Auto Index=Yes
+Auto TOC=9
+Compatibility=1.1 or later
+Compiled file=POP-jpn.chm
+Contents file=POP.hhc
+Default Font=‚l‚r ‚oƒSƒVƒbƒN,9,1
+Default Window=Photo Operator
+Default topic=index.html
+Display compile progress=No
+Full-text search=Yes
+Index file=POP.hhk
+Language=0x411 “ú–{Œê
+Title=Photo Operator Help File
+
+[WINDOWS]
+Photo Operator="Photo Operator Help File","POP.hhc","POP.hhk","index.html",,,,,,0x63520,,0x387e,,,,,,,,0
+
+
+[FILES]
+index.html
+introduction.html
+requirement.html
+usage\index.html
+usage\open.html
+usage\basic.html
+usage\select.html
+usage\filter.html
+QandA.html
+thanks.html
+bibliography.html
+developer\index.html
+developer\plugin.html
+developer\recycle.html
+image\index.html
+
+[INFOTYPES]
+

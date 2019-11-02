@@ -1,0 +1,9 @@
+; POP.def : DLL 用のモジュール パラメータ宣言
+
+EXPORTS
+	pop_format_count			@1
+	pop_format_info				@2
+	pop_format_support_mode		@3
+	pop_format_import			@4
+	pop_format_export			@5
+	pop_format_option			@6

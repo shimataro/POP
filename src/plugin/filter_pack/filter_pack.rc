@@ -1,0 +1,409 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTION_SEPIA DIALOG DISCARDABLE  0, 0, 131, 93
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ｾﾋﾟｱ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "Slider1",IDC_OPTION_SEPIA_SLIDER_STRENGTH,
+                    "msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | WS_TABSTOP,
+                    16,16,100,23
+    LTEXT           "弱",IDC_STATIC,9,26,8,8
+    LTEXT           "強",IDC_STATIC,116,25,8,8
+    GROUPBOX        "強度",IDC_STATIC,7,7,117,34
+    CONTROL         "",IDC_OPTION_SEPIA_STATIC_PREVIEW,"Static",SS_BITMAP | 
+                    SS_NOTIFY | SS_SUNKEN,13,45,47,41
+    DEFPUSHBUTTON   "OK",IDOK,68,49,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,68,66,50,14
+END
+
+IDD_OPTION_RIPPLE DIALOG DISCARDABLE  0, 0, 139, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "波紋"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "&X座標",IDC_STATIC,10,20,19,8
+    SCROLLBAR       IDC_OPTION_RIPPLE_SCROLL_CENTER_X,40,20,66,8,WS_TABSTOP
+    LTEXT           "Static",IDC_OPTION_RIPPLE_STATIC_CENTER_X,109,20,18,8
+    LTEXT           "&Y座標",IDC_STATIC,10,30,19,8
+    SCROLLBAR       IDC_OPTION_RIPPLE_SCROLL_CENTER_Y,40,30,66,8,WS_TABSTOP
+    LTEXT           "Static",IDC_OPTION_RIPPLE_STATIC_CENTER_Y,109,30,18,8
+    GROUPBOX        "中心座標",IDC_STATIC,7,7,125,36
+    LTEXT           "振幅(&A)",IDC_STATIC,13,64,24,8
+    SCROLLBAR       IDC_OPTION_RIPPLE_SCROLL_AMPLITUDE,40,64,66,8,WS_TABSTOP
+    LTEXT           "Static",IDC_OPTION_RIPPLE_STATIC_AMPLITUDE,109,64,18,8
+    LTEXT           "周期(&C)",IDC_STATIC,13,74,24,8
+    SCROLLBAR       IDC_OPTION_RIPPLE_SCROLL_CYCLE,40,74,66,8,WS_TABSTOP
+    LTEXT           "Static",IDC_OPTION_RIPPLE_STATIC_CYCLE,109,74,18,8
+    LTEXT           "位相(&P)",IDC_STATIC,13,84,23,8
+    SCROLLBAR       IDC_OPTION_RIPPLE_SCROLL_PHASE,40,84,66,8,WS_TABSTOP
+    LTEXT           "Static",IDC_OPTION_RIPPLE_STATIC_PHASE,109,84,18,8
+    LTEXT           "距離(&D)",IDC_STATIC,13,94,24,8
+    SCROLLBAR       IDC_OPTION_RIPPLE_SCROLL_DISTANCE,40,94,66,8,WS_TABSTOP
+    LTEXT           "Static",IDC_OPTION_RIPPLE_STATIC_DISTANCE,109,94,18,8
+    GROUPBOX        "ﾊﾟﾗﾒｰﾀ",IDC_STATIC,7,51,125,56
+    CONTROL         "",IDC_OPTION_RIPPLE_STATIC_PREVIEW,"Static",SS_BITMAP | 
+                    SS_NOTIFY | SS_SUNKEN,10,111,14,15
+    DEFPUSHBUTTON   "OK",IDOK,82,119,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,82,137,50,14
+END
+
+IDD_OPTION_SOLARIZATION DIALOG DISCARDABLE  0, 0, 131, 123
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ｿﾗﾘｾﾞｰｼｮﾝ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    SCROLLBAR       IDC_OPTION_SOLARIZATION_SCROLL_THRESHOLD,17,21,66,8,
+                    WS_TABSTOP
+    LTEXT           "低",IDC_STATIC,9,21,8,8
+    LTEXT           "高",IDC_STATIC,86,21,8,8
+    LTEXT           "Static",IDC_OPTION_SOLARIZATION_STATIC_THRESHOLD,102,21,
+                    18,8
+    GROUPBOX        "閾値",IDC_STATIC,7,7,117,34
+    CONTROL         "赤(&R)",IDC_OPTION_SOLARIZATION_CHANNEL_RED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,56,32,10
+    CONTROL         "緑(&G)",IDC_OPTION_SOLARIZATION_CHANNEL_GREEN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,49,56,32,10
+    CONTROL         "青(&B)",IDC_OPTION_SOLARIZATION_CHANNEL_BLUE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,86,56,32,10
+    GROUPBOX        "適用ﾁｬﾈﾙ",IDC_STATIC,7,47,117,22
+    CONTROL         "",IDC_OPTION_SOLARIZATION_STATIC_PREVIEW,"Static",
+                    SS_BITMAP | SS_NOTIFY | SS_SUNKEN,13,74,14,15
+    DEFPUSHBUTTON   "OK",IDOK,68,78,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,68,95,50,14
+END
+
+IDD_OPTION_WRENCH DIALOG DISCARDABLE  0, 0, 203, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ねじる"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "ねじりの中心(&X座標) 0～100",IDC_STATIC,7,7,95,8,NOT 
+                    WS_GROUP
+    SCROLLBAR       IDC_OPTION_WRENCH_SCROLL_X,101,7,75,8,WS_TABSTOP
+    LTEXT           "100",IDC_OPTION_WRENCH_STATIC_X,181,7,15,8
+    LTEXT           "ねじりの中心(&Y座標) 0～100",IDC_STATIC,7,23,95,8,NOT 
+                    WS_GROUP
+    SCROLLBAR       IDC_OPTION_WRENCH_SCROLL_Y,101,23,75,8,WS_TABSTOP
+    LTEXT           "100",IDC_OPTION_WRENCH_STATIC_Y,181,23,15,8
+    LTEXT           "ねじりの半径(&R) 1～100",IDC_STATIC,7,37,95,8,NOT 
+                    WS_GROUP
+    SCROLLBAR       IDC_OPTION_WRENCH_SCROLL_RADIUS,101,37,75,8,WS_TABSTOP
+    LTEXT           "100",IDC_OPTION_WRENCH_STATIC_RADIUS,181,37,15,8
+    LTEXT           "ねじる角度(&A) -360～360",IDC_STATIC,7,53,95,8,NOT 
+                    WS_GROUP
+    SCROLLBAR       IDC_OPTION_WRENCH_SCROLL_ANGLE,101,53,75,8,WS_TABSTOP
+    LTEXT           "90",IDC_OPTION_WRENCH_STATIC_ANGLE,181,53,15,8
+    DEFPUSHBUTTON   "OK",IDOK,123,71,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,122,93,50,14
+    CONTROL         "",IDC_OPTION_WRENCH_STATIC_PREVIEW,"Static",SS_BITMAP | 
+                    SS_NOTIFY | SS_SUNKEN,17,69,20,20
+END
+
+IDD_OPTION_GLASSTILE DIALOG DISCARDABLE  0, 0, 131, 109
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ｶﾞﾗｽﾀｲﾙ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "ﾀｲﾙの幅(&W)",IDC_STATIC,13,20,36,8
+    EDITTEXT        IDC_OPTION_GLASSTILE_EDIT_WIDTH,74,17,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_OPTION_GLASSTILE_SPIN_WIDTH,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,115,17,9,14
+    LTEXT           "ﾀｲﾙの高さ(&H)",IDC_STATIC,13,36,41,8
+    EDITTEXT        IDC_OPTION_GLASSTILE_EDIT_HEIGHT,74,33,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_OPTION_GLASSTILE_SPIN_HEIGHT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,115,33,9,14
+    GROUPBOX        "ﾀｲﾙの大きさ",IDC_STATIC,7,7,117,46
+    CONTROL         "",IDC_OPTION_GLASSTILE_STATIC_PREVIEW,"Static",
+                    SS_BITMAP | SS_NOTIFY | SS_SUNKEN,13,58,14,15
+    DEFPUSHBUTTON   "OK",IDOK,68,65,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,68,83,50,14
+END
+
+IDD_OPTION_POSTERIZATION DIALOG DISCARDABLE  0, 0, 129, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ﾎﾟｽﾀﾘｾﾞｰｼｮﾝ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "低",IDC_STATIC,9,20,8,8
+    LTEXT           "高",IDC_STATIC,90,20,8,8
+    LTEXT           "Static",IDC_OPTION_POSTERIZATION_STATIC_TONE,102,20,18,
+                    8
+    GROUPBOX        "階調",IDC_STATIC,7,7,115,34
+    CONTROL         "",IDC_OPTION_POSTERIZATION_STATIC_PREVIEW,"Static",
+                    SS_BITMAP | SS_NOTIFY | SS_SUNKEN,13,46,14,15
+    DEFPUSHBUTTON   "OK",IDOK,72,49,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,72,66,50,14
+    SCROLLBAR       IDC_OPTION_POSTERIZATION_SCROLL_TONE,19,20,68,8,
+                    WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPTION_SEPIA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_OPTION_RIPPLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_OPTION_SOLARIZATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_OPTION_WRENCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_OPTION_GLASSTILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_OPTION_POSTERIZATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "フィルタプラグイン パッケージ\0"
+            VALUE "CompanyName", "しまたろ@Personal Software House\0"
+            VALUE "FileDescription", "フィルタプラグイン パッケージ\0"
+            VALUE "FileVersion", "1.00\0"
+            VALUE "InternalName", "filter_pack\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002 しまたろ@Personal Software House\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "filter_pack.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "フィルタプラグイン パッケージ\0"
+            VALUE "ProductVersion", "1.00\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILTER_GENRE_TONE   "色調の変換"
+    IDS_FILTER_GENRE_ALLAXIS "変形"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILTER_NAME_INVERSE "反転(&I)"
+    IDS_FILTER_NAME_SEPIA   "ｾﾋﾟｱ(&S)..."
+    IDS_FILTER_NAME_SOLARIZATION "ｿﾗﾘｾﾞｰｼｮﾝ(&S)..."
+    IDS_FILTER_NAME_POSTERIZATION "ﾎﾟｽﾀﾘｾﾞｰｼｮﾝ(&P)..."
+    IDS_FILTER_NAME_RIPPLE  "波紋(&R)..."
+    IDS_FILTER_NAME_WRENCH  "ねじる(&W)..."
+    IDS_FILTER_NAME_OPAQUE  "ぼかす(&O)..."
+    IDS_FILTER_NAME_SHARPEN "ｼｬｰﾌﾟにする(&S)"
+    IDS_FILTER_NAME_GLASSTILE "ｶﾞﾗｽﾀｲﾙ(&T)..."
+    IDS_FILTER_NAME_MOSAIC  "ﾓｻﾞｲｸ(&M)..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PRODUCT_AUTHOR      "しまたろ"
+    IDS_PRODUCT_DESCRIPTION "ﾌｨﾙﾀﾌﾟﾗｸﾞｲﾝ ﾊﾟｯｹｰｼﾞ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_SEPIA_SLIDER_STRENGTH "ｾﾋﾟｱの強度を指定します"
+    IDC_OPTION_SEPIA_STATIC_PREVIEW "ﾌﾟﾚﾋﾞｭｰ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_RIPPLE_SCROLL_CENTER_X "中心座標(x座標)を指定します"
+    IDC_OPTION_RIPPLE_SCROLL_CENTER_Y "中心座標(y座標)を指定します"
+    IDC_OPTION_RIPPLE_SCROLL_AMPLITUDE "振幅を指定します"
+    IDC_OPTION_RIPPLE_SCROLL_CYCLE "周期を指定します"
+    IDC_OPTION_RIPPLE_SCROLL_PHASE "位相を指定します"
+    IDC_OPTION_RIPPLE_SCROLL_DISTANCE "距離を指定します"
+    IDC_OPTION_RIPPLE_STATIC_PREVIEW "ﾌﾟﾚﾋﾞｭｰ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_SOLARIZATION_SCROLL_THRESHOLD "ｿﾗﾘｾﾞｰｼｮﾝの閾値を指定します"
+    IDC_OPTION_SOLARIZATION_CHANNEL_RED "赤ﾁｬﾈﾙに適用します"
+    IDC_OPTION_SOLARIZATION_CHANNEL_GREEN "緑ﾁｬﾈﾙに適用します"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_SOLARIZATION_CHANNEL_BLUE "青ﾁｬﾈﾙに適用します"
+    IDC_OPTION_SOLARIZATION_STATIC_PREVIEW "ﾌﾟﾚﾋﾞｭｰ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_WRENCH_SCROLL_X "ねじりの中心のX座標です。"
+    IDC_OPTION_WRENCH_SCROLL_Y "ねじりの中心のY座標です。"
+    IDC_OPTION_WRENCH_SCROLL_RADIUS 
+                            "ねじり効果を与える点までの距離を指定します。"
+    IDC_OPTION_WRENCH_SCROLL_ANGLE 
+                            "ねじる角度を度単位で指定します。時計方向が正の値です。"
+    IDC_OPTION_WRENCH_STATIC_PREVIEW "ﾌﾟﾚﾋﾞｭｰ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILTER_GENRE_OPAQUE "ぼかし"
+    IDS_FILTER_GENRE_GLASS  "ｶﾞﾗｽ効果"
+    IDS_FILTER_GENRE_SPECIAL "特殊効果"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_GLASSTILE_EDIT_WIDTH "ｶﾞﾗｽﾀｲﾙの幅を設定します"
+    IDC_OPTION_GLASSTILE_EDIT_HEIGHT "ｶﾞﾗｽﾀｲﾙの高さを設定します"
+    IDC_OPTION_GLASSTILE_STATIC_PREVIEW "ﾌﾟﾚﾋﾞｭｰ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_OPTION_POSTERIZATION_SCROLL_TONE "ﾎﾟｽﾀﾘｾﾞｰｼｮﾝの階調を設定します"
+    IDC_OPTION_POSTERIZATION_STATIC_PREVIEW "ﾌﾟﾚﾋﾞｭｰ"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

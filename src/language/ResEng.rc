@@ -1,0 +1,1390 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\POP.rc2""  // Microsoft Visual C++ 以外のﾂｰﾙで編集されたﾘｿｰｽ\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のｺﾝﾎﾟｰﾈﾝﾄ\r\n"
+    "#include ""l.jpn\\afxprint.rc""        // 印刷/印刷ﾌﾟﾚﾋﾞｭｰ ﾘｿｰｽ\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPERATION_RESIZE DIALOG DISCARDABLE  0, 0, 187, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ｻｲｽﾞ変更"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "幅",IDC_STATIC,11,18,8,8
+    LTEXT           "0",IDC_RESIZE_STATIC_NOW_WIDTH,39,18,17,8
+    LTEXT           "高さ",IDC_STATIC,11,30,13,8
+    LTEXT           "0",IDC_RESIZE_STATIC_NOW_HEIGHT,39,30,17,8
+    GROUPBOX        "現在の画像情報",IDC_STATIC,5,7,59,36
+    CONTROL         "縦横比を固定",IDC_RESIZE_CHECK_KEEPASPECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,51,62,10
+    CONTROL         "最近傍補間",IDC_RESIZE_RADIO_INTERPOLATE_NEAREST,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,11,78,50,10
+    CONTROL         "線形補間",IDC_RESIZE_RADIO_INTERPOLATE_LINER,"Button",
+                    BS_AUTORADIOBUTTON,71,78,43,10
+    CONTROL         "ｽﾌﾟﾗｲﾝ補間",IDC_RESIZE_RADIO_INTERPOLATE_SPLINE,"Button",
+                    BS_AUTORADIOBUTTON,122,78,51,10
+    GROUPBOX        "補間の種類",IDC_STATIC,5,68,175,25,WS_GROUP
+    CONTROL         "ﾊﾟｰｾﾝﾃｰｼﾞを指定",IDC_RESIZE_RADIO_SIZE_PERCENTAGE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,10,107,81,10
+    CONTROL         "ﾋﾟｸｾﾙを指定",IDC_RESIZE_RADIO_SIZE_PIXEL,"Button",
+                    BS_AUTORADIOBUTTON,10,141,60,10
+    GROUPBOX        "ｻｲｽﾞの指定法",IDC_STATIC,5,97,175,80,WS_GROUP
+    LTEXT           "幅(&W)",IDC_STATIC,25,121,18,8
+    EDITTEXT        IDC_RESIZE_EDIT_PERCENTAGE_NEWWIDTH,45,119,40,14,
+                    ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "%",IDC_STATIC,87,121,8,8
+    LTEXT           "高さ(&H)",IDC_STATIC,100,121,22,8
+    EDITTEXT        IDC_RESIZE_EDIT_PERCENTAGE_NEWHEIGHT,124,119,40,14,
+                    ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "%",IDC_STATIC,166,121,8,8
+    LTEXT           "幅(&W)",IDC_STATIC,25,155,18,8
+    EDITTEXT        IDC_RESIZE_EDIT_PIXEL_NEWWIDTH,45,153,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "高さ(&H)",IDC_STATIC,100,155,22,8
+    EDITTEXT        IDC_RESIZE_EDIT_PIXEL_NEWHEIGHT,124,153,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,130,24,50,14
+END
+
+IDD_SETTING DIALOGEX 0, 0, 339, 245
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "環境設定"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_SETTING_TREE_CATEGORY,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_TABSTOP,7,7,
+                    105,206,WS_EX_CLIENTEDGE
+    GROUPBOX        "",IDC_SETTING_STATIC_GROUP,118,7,214,206
+    CONTROL         "ｺﾒﾝﾄを画像に埋め込む(&I)",
+                    IDC_SETTING_BASIC_CHECK_IMPLANT_COMMENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,123,20,90,10
+    EDITTEXT        IDC_SETTING_BASIC_EDIT_COMMENT,224,18,102,14,
+                    ES_AUTOHSCROLL
+    CONTROL         "起動時に前回のｳｲﾝﾄﾞｳ位置とｻｲｽﾞを復元(&P)",
+                    IDC_SETTING_BASIC_CHECK_SAVE_WINDOW_PLACEMENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,123,37,147,10
+    LTEXT           "最近使ったﾌｧｲﾙ一覧で表示するﾌｧｲﾙ数(&F):",
+                    IDC_SETTING_BASIC_STATIC_MRUCOUNT,122,77,128,8
+    EDITTEXT        IDC_SETTING_BASIC_MRUCOUNT,253,73,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SETTING_BASIC_SPIN_MRUCOUNT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,292,73,10,14
+    CONTROL         "ﾌｧｲﾙｶﾞﾝﾏを有効にする(&F)",
+                    IDC_SETTING_DISPLAY_CHECK_ACTIVATE_GAMMA_FILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,29,105,10
+    CONTROL         "ﾃﾞｺｰﾃﾞｨﾝｸﾞｶﾞﾝﾏを手動設定する(&E)",
+                    IDC_SETTING_DISPLAY_CHECK_CUSTOMIZE_GAMMA_DECODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,44,122,10
+    EDITTEXT        IDC_SETTING_DISPLAY_GAMMA_DECODE,251,41,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    CONTROL         "ﾃﾞｨｽﾌﾟﾚｲｶﾞﾝﾏを手動設定する(&I)",
+                    IDC_SETTING_DISPLAY_CHECK_CUSTOMIZE_GAMMA_DISPLAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,59,116,10
+    EDITTEXT        IDC_SETTING_DISPLAY_GAMMA_DISPLAY,251,55,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "ｶﾞﾝﾏ",IDC_SETTING_DISPLAY_GAMMA_STATIC_GROUP,123,17,175,
+                    58
+    LTEXT           "格子の色",IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_COLOR,
+                    128,107,28,8
+    CONTROL         "",IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_COLOR_SELECT1,
+                    "Static",SS_BLACKRECT | SS_NOTIFY,172,106,21,11,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_COLOR_SELECT2,
+                    "Static",SS_BLACKRECT | SS_NOTIFY,199,106,21,11,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "格子の大きさ",
+                    IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_SIZE,128,92,39,8
+    COMBOBOX        IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE,172,90,48,90,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "透明部分",IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_GROUP,
+                    123,80,104,42
+    CONTROL         "Windows &XP風ｱｲｺﾝ（再起動後に有効）",
+                    IDC_SETTING_DISPLAY_TOOBAR_XP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,127,138,128,10
+    GROUPBOX        "ﾂｰﾙﾊﾞｰ",IDC_SETTING_DISPLAY_TOOBAR_STATIC_GROUP,123,126,
+                    134,30
+    CONTROL         "List1",IDC_SETTING_CATEGORY_DISPLAY_LANGUAGE_LIST,
+                    "SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,123,21,203,161
+    LTEXT           "ｲﾝｽﾄｰﾙされているﾌﾟﾗｸﾞｲﾝ一覧（ﾀﾞﾌﾞﾙｸﾘｯｸで設定）",
+                    IDC_SETTING_BASIC_PLUGIN_STATIC,123,22,179,8
+    CONTROL         "List1",IDC_SETTING_BASIC_PLUGIN_LIST_INSTALLED,
+                    "SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,123,31,203,89
+    DEFPUSHBUTTON   "OK",IDOK,116,224,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,173,224,50,14
+END
+
+IDD_FILE_IMPORT_DISPLAY DIALOG DISCARDABLE  0, 0, 155, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "画面取り込み"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "ﾃﾞｽｸﾄｯﾌﾟ全体(&D)",IDC_FILE_IMPORT_DISPLAY_AREA_DESKTOP,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,9,18,74,10
+    CONTROL         "ｳｲﾝﾄﾞｳ全体(&W)",
+                    IDC_FILE_IMPORT_DISPLAY_AREA_WINDOW_ALTOGETHER,"Button",
+                    BS_AUTORADIOBUTTON,9,30,68,10
+    CONTROL         "ｳｲﾝﾄﾞｳの内側(&C)",
+                    IDC_FILE_IMPORT_DISPLAY_AREA_WINDOW_CLIENT,"Button",
+                    BS_AUTORADIOBUTTON,9,42,74,10
+    GROUPBOX        "取り込む領域",IDC_STATIC,7,7,84,48,WS_GROUP
+    EDITTEXT        IDC_FILE_IMPORT_DISPLAY_TIMING,15,60,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_FILE_IMPORT_DISPLAY_SPIN_TIMING,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,54,60,9,14
+    LTEXT           "秒後に取り込む",IDC_STATIC,56,63,47,8
+    DEFPUSHBUTTON   "OK",IDOK,98,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,98,24,50,14
+END
+
+IDD_OPERATION_QUANTIZE DIALOG DISCARDABLE  0, 0, 179, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "減色"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "256色",IDC_QUANT_COLORS_RADIO_256,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,13,17,33,10
+    CONTROL         "16色",IDC_QUANT_COLORS_RADIO_16,"Button",
+                    BS_AUTORADIOBUTTON,13,27,30,10
+    CONTROL         "8色",IDC_QUANT_COLORS_RADIO_8,"Button",
+                    BS_AUTORADIOBUTTON,13,37,26,10
+    CONTROL         "色数指定",IDC_QUANT_COLORS_RADIO_ASSIGN,"Button",
+                    BS_AUTORADIOBUTTON,13,47,43,10
+    EDITTEXT        IDC_QUANT_COLORS_EDIT_ASSIGN,58,45,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
+    CONTROL         "Spin1",IDC_QUANT_COLORS_SPIN_ASSIGN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,89,45,9,14
+    LTEXT           "色",IDC_STATIC,99,47,8,8
+    GROUPBOX        "色数",IDC_STATIC,7,7,110,58
+    CONTROL         "頻度順",IDC_QUANT_METHOD_RADIO_FREQ,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,13,82,37,10
+    CONTROL         "ﾒﾃﾞｨｱﾝｶｯﾄ法",IDC_QUANT_METHOD_RADIO_MEDIANCUT,"Button",
+                    BS_AUTORADIOBUTTON,13,92,54,10
+    CONTROL         "Padie ｱﾙｺﾞﾘｽﾞﾑ",IDC_QUANT_METHOD_RADIO_PADIE,"Button",
+                    BS_AUTORADIOBUTTON,13,102,62,10
+    CONTROL         "固定ﾊﾟﾚｯﾄ",IDC_QUANT_METHOD_RADIO_PALETTE,"Button",
+                    BS_AUTORADIOBUTTON,13,112,47,10
+    GROUPBOX        "減色法",IDC_STATIC,7,72,79,53,WS_GROUP
+    CONTROL         "ﾃﾞｨｻﾞﾘﾝｸﾞなし",IDC_QUANT_DITHER_RADIO_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,97,82,63,10
+    CONTROL         "Bayer法",IDC_QUANT_DITHER_RADIO_BAYER,"Button",
+                    BS_AUTORADIOBUTTON,97,92,40,10
+    CONTROL         "ﾗﾝﾀﾞﾑﾃﾞｨｻﾞ",IDC_QUANT_DITHER_RADIO_RANDOM,"Button",
+                    BS_AUTORADIOBUTTON,97,102,59,10
+    CONTROL         "誤差拡散法",IDC_QUANT_DITHER_RADIO_SPREAD,"Button",
+                    BS_AUTORADIOBUTTON,97,112,50,10
+    GROUPBOX        "ﾃﾞｨｻﾞﾘﾝｸﾞ",IDC_STATIC,90,72,81,53,WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,122,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,122,24,50,14
+END
+
+IDD_OPERATION_TRIMMING DIALOG DISCARDABLE  0, 0, 187, 232
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ﾄﾘﾐﾝｸﾞ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "幅",IDC_STATIC,11,18,8,8
+    LTEXT           "0",IDC_TRIMMING_STATIC_NOW_WIDTH,39,18,17,8
+    LTEXT           "高さ",IDC_STATIC,11,30,13,8
+    LTEXT           "0",IDC_TRIMMING_STATIC_NOW_HEIGHT,39,30,17,8
+    GROUPBOX        "現在の画像情報",IDC_STATIC,5,7,59,36
+    ICON            IDR_MAINFRAME,IDC_STATIC,83,83,20,20
+    LTEXT           "上",IDC_STATIC,63,63,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_MARGIN_TOP,72,61,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",IDC_TRIMMING_SPIN_MARGIN_TOP,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,102,61,10,14
+    LTEXT           "右",IDC_STATIC,124,87,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_MARGIN_RIGHT,132,85,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_TRIMMING_SPIN_MARGIN_RIGHT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,162,85,10,14
+    LTEXT           "下",IDC_STATIC,63,112,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_MARGIN_BOTTOM,72,110,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_TRIMMING_SPIN_MARGIN_BOTTOM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,102,110,10,14
+    LTEXT           "左",IDC_STATIC,11,87,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_MARGIN_LEFT,19,85,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_TRIMMING_SPIN_MARGIN_LEFT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,49,85,10,14
+    GROUPBOX        "余白",IDC_STATIC,5,50,175,83
+    ICON            IDR_MAINFRAME,IDC_STATIC,83,177,20,20
+    LTEXT           "上",IDC_STATIC,63,157,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_CLIP_TOP,72,155,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",IDC_TRIMMING_SPIN_CLIP_TOP,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,102,155,10,14
+    LTEXT           "右",IDC_STATIC,124,181,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_CLIP_RIGHT,132,179,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_TRIMMING_SPIN_CLIP_RIGHT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,162,179,10,14
+    LTEXT           "下",IDC_STATIC,63,205,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_CLIP_BOTTOM,72,203,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_TRIMMING_SPIN_CLIP_BOTTOM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,102,203,10,14
+    LTEXT           "左",IDC_STATIC,11,181,8,8
+    EDITTEXT        IDC_TRIMMING_EDIT_CLIP_LEFT,19,179,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_TRIMMING_SPIN_CLIP_LEFT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,49,179,10,14
+    GROUPBOX        "切り取り",IDC_STATIC,5,143,175,83
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,130,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_OPERATION_RESIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
+    END
+
+    IDD_FILE_IMPORT_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_OPERATION_QUANTIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SETTING DLGINIT
+BEGIN
+    IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE, 0x403, 12, 0
+0x6c50, 0x6961, 0x206e, 0x6f43, 0x6f6c, 0x0072, 
+    IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE, 0x403, 6, 0
+0x6d53, 0x6c61, 0x006c, 
+    IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE, 0x403, 7, 0
+0x654d, 0x6964, 0x6d75, "\000" 
+    IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE, 0x403, 6, 0
+0x614c, 0x6772, 0x0065, 
+    IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE, 0x403, 5, 0
+0x7548, 0x6567, "\000" 
+    0
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FILE_NEW DIALOGEX 0, 0, 135, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Image"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Width",IDC_STATIC,30,21,18,8
+    EDITTEXT        IDC_FILE_NEW_EDIT_WIDTH,55,17,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_FILE_NEW_SPIN_WIDTH,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,95,17,9,14
+    LTEXT           "&Height",IDC_STATIC,30,35,22,8
+    EDITTEXT        IDC_FILE_NEW_EDIT_HEIGHT,55,32,40,14,ES_RIGHT | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_FILE_NEW_SPIN_HEIGHT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,95,32,9,14
+    GROUPBOX        "Size",IDC_STATIC,7,7,121,45
+    CONTROL         "",IDC_FILE_NEW_STATIC_COLOR,"Static",SS_BLACKRECT | 
+                    SS_NOTIFY,22,75,32,32,WS_EX_CLIENTEDGE
+    GROUPBOX        "Color",IDC_STATIC,7,62,61,55
+    DEFPUSHBUTTON   "OK",IDOK,73,75,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,73,93,50,14
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 199, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Photo Operator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Photo Operator Version 1.00",IDC_STATIC,40,10,83,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001-2003 Shimataro",IDC_STATIC,40,25,115,
+                    8
+    LTEXT           "http://shima-t.cool.ne.jp/",IDC_ABOUT_STATIC_URL,40,40,
+                    81,8,SS_NOTIFY | WS_TABSTOP
+    EDITTEXT        IDC_ABOUT_DESCRIPTION,40,55,152,44,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | 
+                    WS_VSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,142,7,50,14,WS_GROUP
+END
+
+IDD_IMPORT_WINDOW DIALOG DISCARDABLE  0, 0, 173, 66
+STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Import from Window"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Drag this crosshair to select a window.",IDC_STATIC,23,
+                    7,126,8
+    ICON            "",IDC_IMPORT_WINDOW_STATIC_CROSSHAIR,76,19,20,20,
+                    SS_NOTIFY
+    PUSHBUTTON      "Cancel",IDCANCEL,61,45,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FILE_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_IMPORT_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...\tCtrl+N",             ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        POPUP "&Import"
+        BEGIN
+            MENUITEM "from &Clipboard",             ID_FILE_IMPORT_CLIPBOARD
+            MENUITEM "from &Display...",            ID_FILE_IMPORT_DISPLAY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setting...",           ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Alt+Shift+X",     ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Tool Bar"
+        BEGIN
+            MENUITEM "Standard &Toolbar",           ID_VIEW_TOOLBAR
+            MENUITEM "&Selection Toolbar",          ID_VIEW_TOOLBAR_SELECT
+            MENUITEM "&Window Toolbar",             ID_VIEW_TOOLBAR_WINDOW
+            MENUITEM SEPARATOR
+            MENUITEM "&Fix Tool Bars",              ID_VIEW_TOOLBAR_FIX
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Always Stay on Top",         ID_VIEW_TOPMOST
+    END
+    POPUP "&Setting"
+    BEGIN
+        MENUITEM "Setting &Environment...\tAlt+Enter", 
+                                                ID_SETTING_ENVIRONMENT
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents\tF1",               ID_HELP
+        MENUITEM "&Keywords",                   ID_HELP_INDEX
+        MENUITEM "&Search",                     ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "Author's &Webpage",           ID_HELP_WEBPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About Photo Operator...",    ID_APP_ABOUT
+    END
+END
+
+IDR_POPTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...\tCtrl+N",             ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close\tCtrl+W",              ID_FILE_CLOSE
+        MENUITEM "Clos&e All\tAlt+W",           ID_FILE_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...\tCtrl+Shift+S",   ID_FILE_SAVE_AS
+        MENUITEM "Save A&ll\tAlt+S",            ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        POPUP "&Import"
+        BEGIN
+            MENUITEM "from &Clipboard",             ID_FILE_IMPORT_CLIPBOARD
+            MENUITEM "from &Display...",            ID_FILE_IMPORT_DISPLAY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setting...",           ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Alt+Shift+X",     ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM "C&lear Undo Memory",          ID_EDIT_UNDO_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Cle&ar\tDel",                 ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECT_ALL
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Tool Bar"
+        BEGIN
+            MENUITEM "Standard &Toolbar",           ID_VIEW_TOOLBAR
+            MENUITEM "&Selection Toolbar",          ID_VIEW_TOOLBAR_SELECT
+            MENUITEM "&Window Toolbar",             ID_VIEW_TOOLBAR_WINDOW
+            MENUITEM SEPARATOR
+            MENUITEM "&Fix Tool Bars",              ID_VIEW_TOOLBAR_FIX
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Always Stay on Top",         ID_VIEW_TOPMOST
+    END
+    POPUP "&Operation"
+    BEGIN
+        POPUP "Color &Mode"
+        BEGIN
+            MENUITEM "&Grayscale\tAlt+G",           ID_OPERATION_COLORMODE_GRAYSCALE
+
+            MENUITEM "&Index...\tAlt+I",            ID_OPERATION_COLORMODE_INDEX
+
+            MENUITEM "&RGB\tAlt+R",                 ID_OPERATION_COLORMODE_RGB
+
+        END
+        POPUP "&Alpha"
+        BEGIN
+            MENUITEM "&Add Alpha",                  ID_OPERATION_ALPHA_APPEND
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Transparentize",             ID_OPERATION_ALPHA_0
+            MENUITEM "&Opaque",                     ID_OPERATION_ALPHA_255
+            MENUITEM "&Inverse Alpha",              ID_OPERATION_ALPHA_INVERSE
+
+        END
+        POPUP "&Rotate/Reverse"
+        BEGIN
+            MENUITEM "&Flip",                       ID_OPERATION_TURN_FLIP
+            MENUITEM "&Mirror",                     ID_OPERATION_TURN_MIRROR
+            MENUITEM "&90 Degrees",                 ID_OPERATION_TURN_90
+            MENUITEM "&180 Degrees",                ID_OPERATION_TURN_180
+            MENUITEM "&270 Degrees",                ID_OPERATION_TURN_270
+        END
+        POPUP "&Swap Colors"
+        BEGIN
+            MENUITEM "R<->G",                       ID_OPERATION_SWAP_GRB
+            MENUITEM "R<->B",                       ID_OPERATION_SWAP_BGR
+            MENUITEM "G<->B",                       ID_OPERATION_SWAP_RBG
+            MENUITEM "RGB→BRG",                    ID_OPERATION_SWAP_BRG
+            MENUITEM "RGB→GBR",                    ID_OPERATION_SWAP_GBR
+        END
+        POPUP "&Selection"
+        BEGIN
+            MENUITEM "&Rectangle",                  ID_OPERATION_SELECT_RECT
+            MENUITEM "&Polygon",                    ID_OPERATION_SELECT_POLYGON
+
+            MENUITEM "&Ellipse",                    ID_OPERATION_SELECT_ELLIPSE
+
+            MENUITEM "&Freehand",                   ID_OPERATION_SELECT_FREEHAND
+
+            MENUITEM "&Automatically",              ID_OPERATION_SELECT_AUTO
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Quantize...\tCtrl+Q",        ID_OPERATION_QUANTIZE
+        MENUITEM "&Resize...\tCtrl+R",          ID_OPERATION_RESIZE
+    END
+    POPUP "&Filter"
+    BEGIN
+        MENUITEM "Re&apply Filter\tCtrl+F",     ID_FILTER_REAPPLY
+        MENUITEM "Re&submit Filter\tCtrl+Shift+F", ID_FILTER_RESUBMIT
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Setting"
+    BEGIN
+        MENUITEM "Setting &Environment...\tAlt+Enter", 
+                                                ID_SETTING_ENVIRONMENT
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM SEPARATOR
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents\tF1",               ID_HELP
+        MENUITEM "&Keywords",                   ID_HELP_INDEX
+        MENUITEM "&Search",                     ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "Author's &Webpage",           ID_HELP_WEBPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About Photo Operator...",    ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\POP.ico"
+IDR_POPTYPE             ICON    DISCARDABLE     "res\\pop_icon.ico"
+IDR_POPTYPE2            ICON    DISCARDABLE     "res\\pop_icon2.ico"
+IDR_POPTYPE3            ICON    DISCARDABLE     "res\\pop_icon3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDR_TOOLBAR_WINDOW      BITMAP  DISCARDABLE     "res\\WindowToolbar.bmp"
+IDR_TOOLBAR_SELECT      BITMAP  DISCARDABLE     "res\\SelectToolbar.bmp"
+IDB_TOOLBAR_XP          BITMAP  DISCARDABLE     "res\\ToolbarXP.bmp"
+IDB_TOOLBAR_XP_DISABLED BITMAP  DISCARDABLE     "res\\ToolbarXP_Disabled.bmp"
+IDB_TOOLBAR_XP_HOT      BITMAP  DISCARDABLE     "res\\ToolbarXP_Hot.bmp"
+IDB_WINDOWTOOLBAR_XP    BITMAP  DISCARDABLE     "res\\WindowToolbarXP.bmp"
+IDB_WINDOWTOOLBAR_XP_DISABLED BITMAP  DISCARDABLE     "res\\WindowToolbarXP_Disabled.bmp"
+IDB_WINDOWTOOLBAR_XP_HOT BITMAP  DISCARDABLE     "res\\WindowToolbarXP_Hot.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  18, 17
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVE_ALL
+    BUTTON      ID_FILE_CLOSE
+    BUTTON      ID_FILE_CLOSE_ALL
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_FILE_PRINT_PREVIEW
+    SEPARATOR
+    BUTTON      ID_FILE_IMPORT_CLIPBOARD
+    BUTTON      ID_FILE_IMPORT_DISPLAY
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    BUTTON      ID_EDIT_UNDO_CLEAR
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_EDIT_CLEAR
+    SEPARATOR
+    BUTTON      ID_VIEW_TOPMOST
+    SEPARATOR
+    BUTTON      ID_HELP
+    BUTTON      ID_HELP_INDEX
+    BUTTON      ID_HELP_FINDER
+    BUTTON      ID_HELP_WEBPAGE
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_TOOLBAR_WINDOW TOOLBAR DISCARDABLE  18, 17
+BEGIN
+    BUTTON      ID_WINDOW_NEW
+    SEPARATOR
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_WINDOW_TILE_VERT
+    SEPARATOR
+    BUTTON      ID_WINDOW_ARRANGE
+END
+
+IDR_TOOLBAR_SELECT TOOLBAR DISCARDABLE  18, 17
+BEGIN
+    BUTTON      ID_OPERATION_SELECT_RECT
+    BUTTON      ID_OPERATION_SELECT_POLYGON
+    BUTTON      ID_OPERATION_SELECT_ELLIPSE
+    BUTTON      ID_OPERATION_SELECT_FREEHAND
+    BUTTON      ID_OPERATION_SELECT_AUTO
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_FILTER_REAPPLY,      VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_FILTER_RESUBMIT,     VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "G",            ID_OPERATION_COLORMODE_GRAYSCALE, VIRTKEY, ALT, NOINVERT
+    "I",            ID_OPERATION_COLORMODE_INDEX, VIRTKEY, ALT, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_OPERATION_QUANTIZE,  VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_OPERATION_RESIZE,    VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_OPERATION_COLORMODE_RGB, VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_ALL,       VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_SAVE_AS,        VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      ID_SETTING_ENVIRONMENT, VIRTKEY, ALT, NOINVERT
+    VK_RIGHT,       ID_EDIT_REDO,           VIRTKEY, ALT, NOINVERT
+    "W",            ID_FILE_CLOSE,          VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_FILE_CLOSE_ALL,      VIRTKEY, ALT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_APP_EXIT,            VIRTKEY, SHIFT, CONTROL, ALT, 
+                                                    NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Language Pack for Photo Operator (English)\0"
+            VALUE "CompanyName", "Shimataro\0"
+            VALUE "FileDescription", "Language Pack for Photo Operator (English)\0"
+            VALUE "FileVersion", "1.00\0"
+            VALUE "InternalName", "Language Pack\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002  Shimataro\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ResEng.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Language Pack\0"
+            VALUE "ProductVersion", "1.00\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_FINGER              CURSOR  DISCARDABLE     "res\\finger.cur"
+IDC_CROSSHAIR           CURSOR  DISCARDABLE     "res\\crosshair.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "res\\POP.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Photo Operator"
+    IDR_POPTYPE             "\nNewImage\nPhoto Operator\n\n\nPOP.Document\nPhoto Operator Image File"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_FORMAT_TITLE        "%s %dx%d %d[bits/channel][%s] %d colors using"
+    IDS_FORMAT_TITLE_MODIFIED 
+                            "%s * %dx%d %d[bits/channel][%s] %d colors using"
+    IDS_FORMAT_TITLE_COLORMODE_GRAYSCALE "grayscale"
+    IDS_FORMAT_TITLE_COLORMODE_INDEX "index color"
+    IDS_FORMAT_TITLE_COLORMODE_RGB "RGB"
+    IDS_FORMAT_OPEN         "%sAll Image Files%c%s%cAll Files(*.*)%c*.*%c%c"
+    IDS_FORMAT_SETTING      "Setting of &%s..."
+    IDS_UNDOCLEAR           "Conventional undo infomation will become invalid. OK?"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_IR_APIERROR         "API error"
+    IDS_IR_UNKNOWN          "Unknown error"
+    IDS_UNABLETOIMPORT      "Unsupported Format"
+    IDS_UNABLETOEXPORT      "Unable to save in this format. Choose another format."
+    IDS_NOEXPORTABLEFORMAT  "No Exportable Format."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_INDICATOR_FORMAT    "Format:%s"
+    IDS_INDICATOR_COLOR     "R:%d G:%d B:%d"
+    IDS_INDICATOR_POINT     "Coord:(%d,%d)"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_HELPFILE            "POP-eng.chm"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_CAPTION_TOOLBAR_STANDARD "Standard"
+    IDS_CAPTION_TOOLBAR_SELECT "Selection"
+    IDS_CAPTION_TOOLBAR_WINDOW "Window"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_PROCESSING          "Processing...(Press ESC to Abort)"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Photo Operator"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_KANA       "KANA"
+    ID_INDICATOR_COLOR      "R:--- G:--- B:---"
+    ID_INDICATOR_POINT      "Coord:(----,----)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program infomation, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit Photo Operator; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_WEBPAGE         "Go to the author's webpage\nAuthor's Webpage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_RESIZE     "Resize image\nResize"
+    ID_OPERATION_QUANTIZE   "Quantize image\nQuantize"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_UNDO_CLEAR      "Erase the undo memory\nErase Undo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_CLOSE_ALL       "Close all documents\nClose All"
+    ID_FILE_SAVE_ALL        "Save all documents\nSave All"
+    ID_FILE_IMPORT_CLIPBOARD 
+                            "Import a image from clipboard\nImport from clipboard"
+    ID_FILE_IMPORT_DISPLAY  "Import a image from display\nImport from display"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_FILE_NEW_EDIT_WIDTH "????????????????"
+    IDC_FILE_NEW_EDIT_HEIGHT "?????????????????"
+    IDC_FILE_NEW_STATIC_COLOR 
+                            "新規ｲﾒｰｼﾞの色です。ｸﾘｯｸすると色を選択できます。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR_SELECT  "Show or hide the selection toolbar\nToggle Selection ToolBar"
+    ID_VIEW_TOOLBAR_WINDOW  "Show or hide the window toolbar\nToggle Window ToolBar"
+    ID_VIEW_TOOLBAR_FIX     "ﾂｰﾙﾊﾞｰのｻｲｽﾞと位置を固定\nﾂｰﾙﾊﾞｰを固定"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOPMOST         "Stay on top\nTopmost"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_TURN_FLIP  "Flip image\nFlip"
+    ID_OPERATION_TURN_MIRROR "Mirror image\nMirror"
+    ID_OPERATION_TURN_90    "Rotate 90 degrees\nRotate 90 degrees"
+    ID_OPERATION_TURN_180   "Rotate 180 degrees\nRotate180 degrees"
+    ID_OPERATION_TURN_270   "Rotate 270 degrees\nRotate 270 degrees"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_QUANT_COLORS_RADIO_256 "Quantize to 256 colors"
+    IDC_QUANT_COLORS_RADIO_16 "Quantize to 16 colors"
+    IDC_QUANT_COLORS_RADIO_8 "Quantize to 8 colors"
+    IDC_QUANT_COLORS_RADIO_ASSIGN "?????????????"
+    IDC_QUANT_COLORS_EDIT_ASSIGN "?????????????"
+    IDC_QUANT_METHOD_RADIO_FREQ "使用頻度の高い色から順に採用します"
+    IDC_QUANT_METHOD_RADIO_MEDIANCUT "一般的なﾒﾃﾞｨｱﾝｶｯﾄ法を用いて減色します"
+    IDC_QUANT_METHOD_RADIO_PADIE 
+                            "減色ｿﾌﾄ""Padie""で使用されている手法を用いて減色します"
+    IDC_QUANT_METHOD_RADIO_PALETTE "減色に使用するﾊﾟﾚｯﾄをあらかじめ定義します"
+    IDC_QUANT_DITHER_RADIO_NONE "No dithering"
+    IDC_QUANT_DITHER_RADIO_BAYER "Dithering by Bayer method"
+    IDC_QUANT_DITHER_RADIO_RANDOM "Dithering by random dither pattern"
+    IDC_QUANT_DITHER_RADIO_SPREAD "Dithering by error spread method."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_SWAP_GRB   "Swap RED for GREEN\nR<->G"
+    ID_OPERATION_SWAP_BGR   "Swap RED for BLUE\nR<->B"
+    ID_OPERATION_SWAP_RBG   "Swap GREEN for BLUE\nG<->B"
+    ID_OPERATION_SWAP_BRG   "Rotate RGB clockwise\nRotate clockwise"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_SWAP_GBR   "Rotate RGB counterclockwise\nRotate counterclockwise"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_BASIC_CHECK_IMPLANT_COMMENT 
+                            "画像ﾌｧｲﾙ中にｺﾒﾝﾄをﾃｷｽﾄとして埋め込みます"
+    IDC_SETTING_BASIC_EDIT_COMMENT 
+                            "作成される画像にはこのｺﾒﾝﾄが埋め込まれます"
+    IDC_SETTING_BASIC_CHECK_SAVE_WINDOW_PLACEMENT 
+                            "次回起動時にｳｲﾝﾄﾞｳの位置とｻｲｽﾞを復元したい場合はここをﾁｪｯｸしてください"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_BASIC_MRUCOUNT 
+                            "「最近使ったﾌｧｲﾙ」欄に表\示するﾌｧｲﾙの数を指定します。次回起動時に有効になります"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SETTING_ENVIRONMENT  "Basic setup of Photo Operator\nEnvironmental setup"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ABOUT_STATIC_URL    "Click to jump to URL."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DOCTITLE_CLIPBOARD  "Clipboard%d"
+    IDS_DOCTITLE_DISPLAY    "Display%d"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_TREE_CATEGORY 
+                            "Click to select the category to change setting."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_DISPLAY_CHECK_ACTIVATE_GAMMA_FILE 
+                            "Click to active file gamma."
+    IDC_SETTING_DISPLAY_CHECK_CUSTOMIZE_GAMMA_DECODE 
+                            "Click to input the value of decoding gamma. Usually, need not input."
+    IDC_SETTING_DISPLAY_GAMMA_DECODE "Imput the value of decoding gamma."
+    IDC_SETTING_DISPLAY_CHECK_CUSTOMIZE_GAMMA_DISPLAY 
+                            "Click to input the value of display gamma. Usually, need not input."
+    IDC_SETTING_DISPLAY_GAMMA_DISPLAY "Imput the value of display gamma."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_IR_SUCCESS          "Succeed"
+    IDS_IR_CANCELED         "Canceled"
+    IDS_IR_INCORRECTHEADER  "Incorrect header"
+    IDS_IR_IMAGEDESTROYED   "Image is destroyed"
+    IDS_IR_NOMEMORY         "Not enough memory"
+    IDS_IR_READERROR        "Read error"
+    IDS_IR_WRITEERROR       "Write error"
+    IDS_IR_ILLEGALPARAM     "Illegal parameter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETTING_CATEGORY_BASIC "Basic"
+    IDS_SETTING_CATEGORY_BASIC_PLUGIN "Plugin"
+    IDS_SETTING_CATEGORY_DISPLAY "Display"
+    IDS_SETTING_CATEGORY_DISPLAY_LANGUAGE "Language"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_COLORMODE_GRAYSCALE "Convert to grayscale\nGrayscale"
+    ID_OPERATION_COLORMODE_INDEX "Convert to index color\nIndex color"
+    ID_OPERATION_COLORMODE_RGB "Convert to RGB color\nRGB color"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_FILE_IMPORT_DISPLAY_AREA_DESKTOP "ﾃﾞｽｸﾄｯﾌﾟ全体を取り込みます"
+    IDC_FILE_IMPORT_DISPLAY_AREA_WINDOW_ALTOGETHER 
+                            "選択したｳｲﾝﾄﾞｳを取り込みます"
+    IDC_FILE_IMPORT_DISPLAY_AREA_WINDOW_CLIENT 
+                            "選択したｳｲﾝﾄﾞｳの内側を取り込みます"
+    IDC_FILE_IMPORT_DISPLAY_TIMING 
+                            "選択したｳｲﾝﾄﾞｳを何秒後に取り込むか指定します"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_IMPORT_WINDOW_STATIC_CROSSHAIR 
+                            "Drag this crosshair to select a window."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILTER_REAPPLY       "直前に使ったﾌｨﾙﾀを再適用\nﾌｨﾙﾀの再適用"
+    ID_FILTER_RESUBMIT      "直前に使ったﾌｨﾙﾀを設定つきで再実行\nﾌｨﾙﾀの再実行"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_SELECT_RECT "Select a rectangle region\nSelect rectangle"
+    ID_OPERATION_SELECT_POLYGON "Select a polygon region\nSelect polygon"
+    ID_OPERATION_SELECT_ELLIPSE "Select a ellipse region\nSelect ellipse"
+    ID_OPERATION_SELECT_FREEHAND 
+                            "Select a region by freehand\nSelect by freehand"
+    ID_OPERATION_SELECT_AUTO 
+                            "Select a region automatically\nSelect automatically"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPERATION_ALPHA_APPEND 
+                            "Add/Remove an alpha channel to the image\nAdd/Remove an alpha channel"
+    ID_OPERATION_ALPHA_0    "すべてのﾋﾟｸｾﾙを透明化\n透明化"
+    ID_OPERATION_ALPHA_255  "すべてのﾋﾟｸｾﾙを不透明化\n不透明化"
+    ID_OPERATION_ALPHA_INVERSE 
+                            "画像中のすべてのｱﾙﾌｧ値を反転します\nｱﾙﾌｧ値を反転"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_DISPLAY_TRANSPARENT_COMBO_SIZE 
+                            "背景の格子の大きさを指定します"
+    IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_COLOR_SELECT1 
+                            "画像の背景色を指定します。ｸﾘｯｸすると色を選択できます"
+    IDC_SETTING_DISPLAY_TRANSPARENT_STATIC_COLOR_SELECT2 
+                            "画像の背景色を指定します。ｸﾘｯｸすると色を選択できます"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_DISPLAY_TOOBAR_XP 
+                            "ﾂｰﾙﾊﾞｰのｱｲｺﾝをWindows XPｽﾀｲﾙにします。次回起動時に有効になります"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PLUGIN_NAME         "Name"
+    IDS_PLUGIN_VERSION      "Version"
+    IDS_PLUGIN_AUTHOR       "Author"
+    IDS_PLUGIN_DESCRIPTION  "Comment"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUT_DESCRIPTION   "本ｿﾌﾄｳｪｱはﾌﾘｰｳｪｱです。営利・非営利を問わず、どなたでも自由にご利用いただけます。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LANGUAGE_MODULE     "Module"
+    IDS_LANGUAGE_LANGUAGE   "Language"
+    IDS_LANGUAGE_VERSION    "Version"
+    IDS_LANGUAGE_AUTHOR     "Author"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_CATEGORY_DISPLAY_LANGUAGE_LIST 
+                            "ｲﾝｽﾄｰﾙされている言語ﾊﾟｯｸの一覧です。言語ﾊﾟｯｸ変更後はPhoto Operatorを再起動してください"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SETTING_BASIC_PLUGIN_LIST_INSTALLED "Installed plugins."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMAT_NAME_PGF     "PGF"
+    IDS_FORMAT_EXT_PGF      ".pgf"
+    IDS_FORMAT_FILTER_PGF   "*.pgf"
+    IDS_FORMAT_EXPRESSION_PGF "Photo Operator Graphic Format(*.pgf)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_RESIZE_CHECK_KEEPASPECT "現在のｲﾒｰｼﾞの縦横比を保ちます"
+    IDC_RESIZE_RADIO_INTERPOLATE_NEAREST "最高速ですが、最も低品質です"
+    IDC_RESIZE_RADIO_INTERPOLATE_LINER "処理速度も品質も中程度です"
+    IDC_RESIZE_RADIO_INTERPOLATE_SPLINE "最も高品質ですが、最低速です"
+    IDC_RESIZE_RADIO_SIZE_PERCENTAGE 
+                            "新しいｻｲｽﾞを、現在のｲﾒｰｼﾞからの相対的な値で設定します"
+    IDC_RESIZE_RADIO_SIZE_PIXEL "新しいｻｲｽﾞを、ﾋﾟｸｾﾙで直接設定します"
+    IDC_RESIZE_EDIT_PERCENTAGE_NEWWIDTH 
+                            "新しいｻｲｽﾞの幅を、現在の幅に対する割合で指定します"
+    IDC_RESIZE_EDIT_PERCENTAGE_NEWHEIGHT 
+                            "新しいｻｲｽﾞの高さを、現在の高さに対する割合で指定します"
+    IDC_RESIZE_EDIT_PIXEL_NEWWIDTH "新しいｻｲｽﾞの幅を、ﾋﾟｸｾﾙで直接指定します"
+    IDC_RESIZE_EDIT_PIXEL_NEWHEIGHT 
+                            "新しいｻｲｽﾞの高さを、ﾋﾟｸｾﾙで直接指定します"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_TRIMMING_EDIT_MARGIN_TOP 
+                            "画像上部の余白ｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+    IDC_TRIMMING_EDIT_MARGIN_RIGHT 
+                            "画像右側の余白ｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+    IDC_TRIMMING_EDIT_MARGIN_BOTTOM 
+                            "画像下部の余白ｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+    IDC_TRIMMING_EDIT_MARGIN_LEFT 
+                            "画像左側の余白ｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+    IDC_TRIMMING_EDIT_CLIP_TOP 
+                            "画像上部の切り取りｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+    IDC_TRIMMING_EDIT_CLIP_RIGHT 
+                            "画像右側の切り取りｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_TRIMMING_EDIT_CLIP_BOTTOM 
+                            "画像下部の切り取りｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+    IDC_TRIMMING_EDIT_CLIP_LEFT 
+                            "画像左側の切り取りｻｲｽﾞをﾋﾟｸｾﾙ単位で指定してください"
+END
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\POP.rc2"  // Microsoft Visual C++ 以外のﾂｰﾙで編集されたﾘｿｰｽ
+#include "l.jpn\afxres.rc"          // 標準のｺﾝﾎﾟｰﾈﾝﾄ
+#include "l.jpn\afxprint.rc"        // 印刷/印刷ﾌﾟﾚﾋﾞｭｰ ﾘｿｰｽ
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

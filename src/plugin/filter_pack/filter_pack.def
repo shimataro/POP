@@ -1,0 +1,13 @@
+; filter_pack.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "filter_pack"
+
+EXPORTS
+	pop_get_product			@1
+	pop_set_registry		@2
+;	pop_setup				@3
+	pop_filter_count        @4
+	pop_filter_info			@5
+	pop_filter_executable	@6
+	pop_filter_effect		@7
+	pop_filter_option		@8

@@ -1,0 +1,309 @@
+% http://www.matsusaka-u.ac.jp/~okumura/jsclasses/
+\documentclass[a4j, 12pt, fleqn, titlepage]{jsbook}
+\usepackage[dvipdfm]{graphicx}
+\begin{document}
+
+\title{フィルタアルゴリズムの解説}
+\author{しまたろ}
+\date{}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{はじめに}
+Photo Operator標準付属のフィルタプラグインに使用されている
+アルゴリズムを解説します。
+すべてのプラグインにはソースが付属しているので，それを見れば
+アルゴリズムもわかると思いますが，詳しい説明がほしいという人のために
+説明書を作ってみました。何かの参考にしてください。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{濃度変換アルゴリズム}
+Photo Operator標準付属のフィルタの中で，「色調の変換」の中に入っているものは
+\textbf{濃度変換}(concentration transformation)を使用しています。
+ここでは，その濃度変換について解説します。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{画素値について}
+Photo Operatorで扱う画像は，ピクセル（画素）ごとに\textbf{画素値}
+（\textbf{輝度値}，\textbf{濃度値}）が存在します。
+画素値は$0$から$255$までの値をとり，大きいほどその画素が明るいと
+いうことを示しています。また，赤，緑，青の\textbf{光の三原色}を
+それぞれ$0$から$255$までの値をとらせることにより，色を表現しています。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{濃度変換とは}
+すべての濃度値に対して$(r_{out}, g_{out}, b_{out}) = f(r_{in}, g_{in}, b_{in})$
+という変換を行い，画像の濃度を変換することを\textbf{濃度変換}といいます。
+濃度変換を行うことにより，グレイスケールやセピアといった効果を
+与えることができます。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{幾何学的変換アルゴリズム}
+Photo Operator標準付属のフィルタの中で，「変形」の中に入っているものは
+\textbf{幾何学的変換}(geometric transformation)と呼ばれる変形法を
+使用しています。ここでは，その幾何学的変換について解説します。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{幾何学的変換とは}
+入力画像のすべての座標値に対して
+\begin{eqnarray*}
+ (x_{out}, y_{out}) = f(x_{in}, y_{in})
+\end{eqnarray*}
+という式を用い，入力画像の$(x_{in}, y_{in})$の位置にある輝度値を
+出力画像の$(x_{out}, y_{out})$へ対応させる変換を\textbf{幾何学的変換}と
+いいます。例えば
+\begin{eqnarray*}
+ x_{out} &=& \frac{x_{in}}{2} \\
+ y_{out} &=& \frac{y_{in}}{2}
+\end{eqnarray*}
+の場合は，入力画像の$(100, 90)$の位置にある輝度値が$(50, 45)$に移動する
+といったように，すべての入力座標値が半分になるため，結果として
+画像が縦横$\frac{1}{2}$に縮小されます。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{順変換と逆変換}
+先ほどの
+\begin{eqnarray*}
+ (x_{out}, y_{out}) = f(x_{in}, y_{in})
+\end{eqnarray*}
+のような変換法を，入力から出力を導くという意味で\textbf{順変換}と
+呼びます。
+
+しかし，この順変換には大きな問題があります。例えば
+\begin{eqnarray*}
+ x_{out} &=& 2 \times x_{in} \\
+ y_{out} &=& 2 \times y_{in}
+\end{eqnarray*}
+という変換を行った場合は画像が縦横$2$倍に拡大されるのですが，
+$x, y$座標ともに偶数の場所にしか輝度値が書き込まれません。
+つまり，$(1, 1)$や$(100, 99)$といった場所には何も情報がないのです。
+
+また，
+\begin{eqnarray*}
+ x_{out} &=& (x_{in} - 10)^{2} \\
+ y_{out} &=& y_{in}
+\end{eqnarray*}
+という変換を行った場合，出力画像の$(25, 25)$の位置には
+入力画像の$(5, 25)$と$(15, 25)$の2つが対応しているため，
+値が2度書き込まれてしまいます。そのため，どちらの輝度値を採用すべきかが
+問題となります。
+
+このような問題を解決するために，出力画像の各座標が入力画像の
+どの座標に対応しているかを表した\textbf{逆変換}という変換法を使用します。
+逆変換の式は
+\begin{eqnarray*}
+ (x_{in}, y_{in}) = g(x_{out}, y_{out})
+\end{eqnarray*}
+です。
+
+例えば先ほどの画像を拡大する場合は
+\begin{eqnarray*}
+ x_{in} &=& \frac{x_{out}}{2} \\
+ y_{in} &=& \frac{y_{out}}{2}
+\end{eqnarray*}
+といった式で表すことができます。これなら輝度値が抜け落ちたり
+同一座標に複数回輝度値が書き込まれるといった心配はありません。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{補間}
+しかし，この逆変換にも問題があります。例えば先ほどの
+画像拡大の式
+\begin{eqnarray*}
+ x_{in} &=& \frac{x_{out}}{2} \\
+ y_{in} &=& \frac{y_{out}}{2}
+\end{eqnarray*}
+で，出力画像の座標$(99, 99)$に対応する入力画像の座標は
+$(49.5, 49.5)$となります。出力画像の各座標には入力画像の
+対応する座標の輝度値を書き込むのですが，$(49.5, 49.5)$などという
+小数の座標は存在しません。つまり，この場所の輝度値がわからないのです。
+
+そこで，\textbf{補間}という手法を使います。補間とは，対応座標が
+小数であった場合にその周辺の座標の輝度値から最も「それらしい」
+輝度値を計算する方法です。例えばこの場合は，周辺の$(49, 49)$，
+$(49, 50)$，$(50, 49)$，$(50, 50)$などの輝度値から問題の
+$(49.5, 49.5)$の輝度値を推定するのです。
+ただし，補間により得られた値はあくまでも「それらしい」値であり，
+正確な値ではありません。そもそも正確な値というものは一般には
+わからないのですから。そこで，なるべく「それらしく」値を
+求めるために，さまざまな補間の方法が考案されています。
+
+補間の種類には最近傍補間（$0$次補間），線形補間（$1$次補間），
+多項式補間（$n$次補間），コサイン補間などがあります。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{各プラグインの解説}
+この章では，実際にPhoto Operatorに付属しているフィルタのアルゴリズムを
+解説します。なお，説明のためのサンプル画像はWindows 9x系に標準で
+付属している壁紙用画像ファイル``\verb"C:\Windows\森.bmp"''
+（図\ref{fig:sample}）を使用しています。
+\begin{figure}[htb]
+ \begin{center}
+  \includegraphics[width=5cm, keepaspectratio, clip]{forest.png}
+ \end{center}
+ \caption{実験用サンプル画像}
+ \label{fig:sample}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{濃度変換を利用したフィルタ}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{グレイスケール}
+カラー画像を，いわゆる白黒写真のようにします。色彩情報をなくせばよいので
+RGBすべてに同じ値を書き込むことにより実現できます。単純な
+\begin{eqnarray*}
+ r_{out} = g_{out} = b_{out} = \frac{r_{in} + g_{in} + b_{in}}{3}
+\end{eqnarray*}
+という式でも一見使えそうですが，これだともとの画像の緑成分の多いところが
+異様に暗く感じたり，青成分の多いところが異様に明るく感じたりします。
+これは，人間の目の特性が緑成分に強く反応し，青成分に弱く反応するため
+すべての色成分を同じように扱うと不自然に感じるのです。
+
+そこで，付属のフィルタでは人間の目の特性を考慮に入れた式
+\begin{eqnarray*}
+ r_{out} = g_{out} = b_{out} =
+  \frac{r_{in} \times 77 + g_{in} \times 151 + b_{in} \times 28}{256}
+\end{eqnarray*}
+を使用しています。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{反転}
+写真のネガフィルムのように，RGBすべての色成分を反転します。
+\begin{eqnarray*}
+ r_{out} = 255 - r_{in} \\
+ g_{out} = 255 - g_{in} \\
+ b_{out} = 255 - b_{in}
+\end{eqnarray*}
+という非常に単純な式であらわすことができます。
+実際に反転フィルタを適用した様子を図\ref{fig:inverse}に示します。
+\begin{figure}[htb]
+ \begin{center}
+  \includegraphics[width=5cm, keepaspectratio, clip]{forest-inverse.png}
+ \end{center}
+ \caption{反転フィルタ}
+ \label{fig:inverse}
+\end{figure}
+プラグインでは減算をビット反転で代用することにより，高速な処理を
+実現しています。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{セピア}
+古ぼけた写真のように，カラー画像を全体的に黄色っぽくします。
+うまくセピア化された画像はとてもきれいです。
+
+セピアとは\textbf{イカ墨}という意味です。画像がセピア調であるための
+必要条件は$r \ge g \ge b$で，それぞれの差が大きいほど強いセピア調
+（黄色味が増してくる）になります。逆に差が小さいとグレイスケールに近く
+なります。
+
+この関係を保ち，かつセピア調に見せるための式はいろいろな流派がありますが，
+プラグインでは
+\begin{eqnarray*}
+ g_{out} &=& \frac{r_{in} \times 77 + g_{in} \times 151 + b_{in} \times 28}{256} \\
+ r_{out} &=& \left( \frac{g_{out}}{255} \right) ^ \frac{1}{\alpha} \times 255 \\
+ b_{out} &=& \left( \frac{g_{out}}{255} \right) ^ \alpha \times 255
+\end{eqnarray*}
+という式を用いています（$\alpha \ge 1$は強度パラメータ）。これをグラフに
+すると，図\ref{fig:sepia-graph}のようになります（$\alpha = 1.5$のとき）。
+
+\begin{figure}[htb]
+ \begin{center}
+  \includegraphics[width=12cm, keepaspectratio, clip]{sepia_graph.eps}
+ \end{center}
+ \caption{セピアのRGB値}
+ \label{fig:sepia-graph}
+\end{figure}
+
+$g$はグレイスケールの値で，$r$と$b$はそれぞれ指数関数を用いて
+$g$の値を変化させています。$\alpha$が小さいほど$r,b$が直線に近くなり，
+セピアの度合が弱く（グレイスケールに近く）なります。
+
+また，画素ごとに上の式を適用していると時間がかかるため，
+テーブルを用いて高速化を図っています。
+
+なお，プラグインのソースをご覧いただければわかると思いますが，
+強度パラメータは$\alpha$の値を直接使用しているのではなく，
+$0 \le \beta \le 1$をパラメータとして$\alpha = e ^ {\beta}$という関係式を
+経て得られた$\alpha$を使用しています。
+別に積極的にこのようにしなければならない理由があるわけではなく，
+単に\textbf{パラメータの範囲を$0 \sim 1$としたかった}というだけです。
+もちろん$1$より大きいパラメータを指定することも可能ですが，セピアの
+度合が強くなりすぎるため，実際には$\beta = 1$を使うことすら稀だと
+思います。
+図\ref{fig:sepia}は，$\beta = 0.4$としてセピアフィルタを適用した例です。
+\begin{figure}[htb]
+ \begin{center}
+  \includegraphics[width=5cm, keepaspectratio, clip]{forest-sepia.png}
+ \end{center}
+ \caption{セピアフィルタ}
+ \label{fig:sepia}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{幾何学的変換を利用したフィルタ}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{波紋}
+サンプル画像に\textbf{波紋フィルタ}を適用した際の結果を
+図\ref{fig:ripple}に示します。
+ちょうど，底に絵が描いてあるプールに石を投げ，それを上から
+見たような図です。
+このフィルタを作るために必要な情報は波の形状，屈折率です。
+
+以下では，それらの情報を元に幾何学的変換後の座標値を求める方法を示します。
+
+\begin{figure}[htb]
+ \begin{center}
+  \includegraphics[width=5cm, keepaspectratio, clip]{forest-ripple.png}
+ \end{center}
+ \caption{波紋フィルタ}
+ \label{fig:ripple}
+\end{figure}
+
+$X$を処理後の座標，$f$を形状関数，$\alpha$を屈折率として，
+$X$に対応する入力画像の座標$x$を求めます。
+その際，$\theta$を入射角，$\psi$を屈折角，$c$を屈折角の傾きとします。
+
+\begin{eqnarray*}
+  x      &=& X - \frac{f(X)}{c} \\
+  c      &=& \tan \left( \theta - \frac{\pi}{2} - \psi \right) \\
+  \psi   &=& \sin^{-1} \frac{\sin \theta}{\alpha} \\
+  \theta &=& \tan^{-1} f'(x)
+\end{eqnarray*}
+ここで，
+\begin{eqnarray*}
+c &=& \tan \left( \theta - \frac{\pi}{2} - \psi \right) \\
+  &=& \frac{\sin \left( \left( \theta - \frac{\pi}{2} \right) + \left(-\psi \right) \right)}
+           {\cos \left( \left( \theta - \frac{\pi}{2} \right) + \left(-\psi \right) \right)} \\
+  &=& \frac{\sin \left( \theta - \frac{\pi}{2} \right) \cdot \cos \left(-\psi \right) + \cos \left( \theta - \frac{\pi}{2} \right) \cdot \sin \left(-\psi \right)}
+           {\cos \left( \theta - \frac{\pi}{2} \right) \cdot \cos \left(-\psi \right) - \sin \left( \theta - \frac{\pi}{2} \right) \cdot \sin \left(-\psi \right)} \\
+  &=& \frac{\left(-\cos \theta \right) \cdot \cos \psi + \sin \theta \cdot \left(-\sin \psi \right)}
+           {\sin \theta \cdot \cos \psi - \left(-\cos \theta \right) \cdot \left(-\sin \psi \right)} \\
+  &=&-\frac{1 + \tan \theta \cdot \tan \psi}{\tan \theta - \tan \psi}
+\end{eqnarray*}
+なので，
+\begin{eqnarray*}
+  x &=& X - \frac{f(X)}{c}　\\
+    &=& X + f(X) \frac{\tan \theta - \tan \psi}{1 + \tan \theta \cdot \tan \psi}
+\end{eqnarray*}
+ただし，
+\begin{eqnarray*}
+  \tan \theta &=& f'(x) \\
+  \tan \psi   &=& \frac{\sin \psi}{\cos \psi} \\
+              &=& \frac{\sin \theta}{\sqrt{\alpha^{2} - \sin^{2} \theta}}\\
+  \sin \theta &=& \frac{f'(x)}{\sqrt{1 + \left \{ f'(x) \right \}^{2}}} \\
+\end{eqnarray*}
+です。平方根や三角関数の計算を行っているので，精度を犠牲にするなどして
+少しでも高速化する必要があります。
+
+\end{document}
